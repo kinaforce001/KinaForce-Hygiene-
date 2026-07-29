@@ -704,6 +704,40 @@ section {
     font-weight: bold;
 }
 
+/* SIDE PANEL (right-hand delivery & contact) */
+.side-panel {
+    position: fixed;
+    right: 22px;
+    top: 140px;
+    width: 320px;
+    max-width: 34%;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    z-index: 1600;
+    font-size: 15px;
+}
+
+.side-panel h3 { margin-bottom: 8px; }
+.side-panel p, .side-panel li { color: #555; }
+.side-panel .contact-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.side-panel .whatsapp-btn { background:#25D366; color:#fff; padding:10px 12px; border-radius:8px; font-weight:700; display:inline-block; }
+.side-panel a.email-link { color:#111; font-weight:700; }
+.side-panel ul { padding-left: 20px; margin-top:6px; }
+.side-panel ol { padding-left: 18px; margin-top:8px; }
+
+@media (max-width: 900px) {
+    .side-panel {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin: 20px auto;
+        right: auto;
+        top: auto;
+    }
+}
+
 
 /* =========================================================
    FOOTER
@@ -998,3 +1032,38 @@ order directly to KinaForce Hygiene through WhatsApp.
 <!-- =========================================================
      SHOP
 ... (rest of file unchanged) ... -->
+
+
+<!-- Delivery & Contact side panel (right side on desktop, stacked on mobile) -->
+<aside class="side-panel" aria-labelledby="sidepanel-title">
+  <h3 id="sidepanel-title">DELIVERY &amp; CONTACT</h3>
+  <div class="contact-row" style="margin-bottom:8px;">
+    <div>WhatsApp:</div>
+    <a class="whatsapp-btn" href="https://wa.me/67576135711" target="_blank" rel="noopener noreferrer">+675 76135711</a>
+  </div>
+  <p style="margin:0 0 10px 0;">Email: <a class="email-link" href="mailto:kinalink001@gmail.com">kinalink001@gmail.com</a></p>
+
+  <h4 style="margin-top:8px;margin-bottom:6px;">DELIVERY LOCATIONS</h4>
+  <p style="margin:0 0 6px 0;">We deliver within Port Moresby.</p>
+  <p style="margin:0 0 6px 0;font-weight:700;">Our main distribution locations are:</p>
+  <ul>
+    <li>Vision City</li>
+    <li>Gordon's Plaza</li>
+    <li>Waigani Eliseo</li>
+  </ul>
+  <p style="margin-top:8px;">For customers outside Port Moresby or outside the province, please contact us directly so we can discuss and arrange delivery.</p>
+
+  <h4 style="margin-top:12px;margin-bottom:6px;">HOW TO ORDER</h4>
+  <ol>
+    <li>Browse our available products.</li>
+    <li>Select the product you want.</li>
+    <li>Contact us through WhatsApp or email.</li>
+    <li>Confirm your order and delivery location.</li>
+    <li>Arrange delivery or collection.</li>
+  </ol>
+</aside>
+
+
+</body>
+
+</html>
